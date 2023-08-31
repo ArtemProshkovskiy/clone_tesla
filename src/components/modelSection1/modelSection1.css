@@ -1,0 +1,19 @@
+.characteristic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 35px ;
+}
+
+.characteristic div {
+    margin-left: 40px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.characteristic div:first-child{
+    margin-left: 0;
+}
+
+
