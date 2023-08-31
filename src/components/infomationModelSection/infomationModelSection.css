@@ -6,16 +6,24 @@
     flex-direction: column;
 
     background: black;
+
+    padding-top: 125px;
 }
 
 .information_item {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.information_item:first-child span{
+    margin-left: 50px;
 }
 
 
-.information_item:last-child{
-    justify-content: space-around;
+.information_item:last-child span{
+    margin-right: 50px;
 }
 
 .information_item img {

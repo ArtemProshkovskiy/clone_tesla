@@ -29,8 +29,8 @@ function InfomationModelSection(props) {
                 <span>{props.descryption1}</span>
             </div>
             <div className="information_item">
-                <img src={imgSrc2} alt=""/>
                 <span>{props.descryption2}</span>
+                <img src={imgSrc2} alt=""/>
             </div>
         </div>
     );
