@@ -1,0 +1,28 @@
+.information {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    background: black;
+}
+
+.information_item {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.information_item:last-child{
+    justify-content: space-around;
+}
+
+.information_item img {
+    width: 500px;
+}
+
+.information_item span {
+    font-size: 25px;
+    font-weight: 600;
+}
