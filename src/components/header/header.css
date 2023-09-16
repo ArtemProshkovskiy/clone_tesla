@@ -1,10 +1,13 @@
-    .header {
-        z-index: 100;
-        position: fixed;
-        top: 0;
-        left: 50%; /* Use left instead of right */
-        transform: translateX(-50%); /* Center horizontally using negative translate */
-    }
+/* Add a subtle eclipse (box shadow) to your header */
+.header {
+    z-index: 50;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+}
 
     .header ul {
         padding-left: 0;

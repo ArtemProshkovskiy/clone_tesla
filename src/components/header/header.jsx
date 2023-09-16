@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import './header.css';
 import Menu from "../menu/menu";
+import {useSelector} from "react-redux";
 
 function Header() {
     const [showClass, setShowClass] = useState(false);
@@ -9,6 +10,8 @@ function Header() {
     function closeMenu() {
         setShowClass(false)
     }
+
+     const itemsCart = useSelector(state => state.shoppingCart.shoppingCart)
 
     return (
         <>
@@ -34,10 +37,10 @@ function Header() {
                             </li>
 
                             <li className='header_item last'>
-                                <div>
-                                    <span>0</span>
+                                <NavLink to='/shopping_cart'>
+                                    <span>{itemsCart.length}</span>
                                     <img src={require('../../assets/shopping-cart-256.png')} alt=""/>
-                                </div>
+                                </NavLink>
                                 <span onClick={() => setShowClass(true)} className='header_menu'>Menu</span>
                             </li>
 

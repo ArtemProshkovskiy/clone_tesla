@@ -11,7 +11,9 @@ import Model_s from "./pages/model_s";
 import Model_x from "./pages/model_x";
 import Cybertrack from "./pages/cybertrack";
 import Shop from "./pages/shop";
-
+import {Provider} from 'react-redux'; // Import Provider from 'react-redux'
+import {store} from "./global-state/store";
+import ShoppingCart from "./pages/shopingCart";
 
 const router = createBrowserRouter([
     {
@@ -34,11 +36,15 @@ const router = createBrowserRouter([
         path: "/shop",
         element: <Shop/>,
     },
+    {
+        path: "/shopping_cart",
+        element: <ShoppingCart/>,
+    },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('app'));
 root.render(
-    <React.StrictMode>
+    <Provider store={store}>
         <RouterProvider router={router}> </RouterProvider>
-    </React.StrictMode>
+    </Provider>
 );
